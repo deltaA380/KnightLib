@@ -1,0 +1,53 @@
+plugins {
+    id "java"
+    id "maven"
+    id "jaci.openrio.gradle.GradleRIO" version "2018.01.11"
+}
+
+group 'com.team2052'
+version '1.0-SNAPSHOT'
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile wpilib()
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            licenses {
+                license {
+                    name "The MIT License"
+                    url "http://www.opensource.org/licenses/MIT"
+                    distribution 'repo'
+                }
+            }
+        }
+    }
+}
