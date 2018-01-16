@@ -22,3 +22,7 @@ dependencies {
 
 ## Documentation
 [The JavaDocs are available here](https://frc2052.github.io/KnightLib/)
+
+If you are interested in contributing, check out our [contributing guide](CONTRIBUTING.md)
+
+If you want to make a release, check out the [releasing guide](RELEASING.md)
