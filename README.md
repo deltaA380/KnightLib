@@ -19,3 +19,6 @@ dependencies {
     compile 'com.team2052:KnightLib:1.0.0'
 }
 ```
+
+## Documentation
+[The JavaDocs are available here](https://frc2052.github.io/KnightLib/)
