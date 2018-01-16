@@ -16,6 +16,6 @@ Then add the dependency:
 
 ```
 dependencies {
-    compile 'com.team2052:KnightLib:0.0.1'
+    compile 'com.team2052:KnightLib:1.0.0'
 }
 ```
